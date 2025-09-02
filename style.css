@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --tertiary-color: #9390f7;
+  --spacing: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 28px;
+    margin-bottom: var(--spacing);
+}
+h2 {
+  margin-bottom: var(--spacing);
+}
+h3 {
+  margin-bottom: var(--spacing);
+}
+
+p {
+  margin-bottom: var(--spacing);
+}
+body > header  {
+  position: sticky; top: 0px;
+  height: 80px;
+}
+body > header > nav {
+  
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  display: flex ;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing);
+}
+
+nav a:hover {
+  color: var(--tertiary-color);
+}
+
+body > header > nav > ul {
+  display: flex;
+  gap: var(--spacing);
+}
+
+body > header > nav > img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+}
+
+body > header > nav > ul > li > a > img {
+  height: 30px;
+  width: auto;
+}
+
+
+#hero {
+  background-image: url(./assets/imgs/hero_img.png);
+  background-position: center;
+  background-size: 200%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  min-height: 100%;
+  padding: var(--spacing);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  position: relative;
+  text-align: justify;
+}
+
+section > header {
+  padding: var(--spacing);
+}
+
+section > header > div {
+  padding: var(--spacing);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section ul {
+  padding: var(--spacing);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing);
+}
+
+section ul img {
+  width: 100%;
+  aspect-ratio: 1.1;
+  object-fit: cover;
+  border-radius: 5%;
+  transition: transform 0.3s ease-in-out;
+}
+section ul img:hover {
+  transform: scale(1.1); 
+}
+
+.add-to-cart-btn {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  padding: var(--spacing);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: var(--spacing); 
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--tertiary-color) ;
+  transform: scale(1.02); 
+}
+
+.alternative {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    gap: var(--spacing);
+    max-width: 400px;   
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%; 
+    padding: var(--spacing);
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical; 
+}
+
+form input[type="submit"] {
+    align-self: flex-start; /* Aligns the button to the start (left) within the flex column */
+    background-color: var(--tertiary-color);
+    color:var(--primary-color);
+    padding: var(--spacing);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: var(--secondary-color); 
+    color: var(--primary-color); 
+    padding: var(--spacing);
+    display: flex;
+    justify-content: center;
+}
+
+
+/* brakepoints */
+/* Tablets and small laptops (769px - 1024px) */
+@media (min-width: 769px) {
+   body {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+}
+
+/* desktops (1025px and up) */
+@media (min-width: 1025px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.7rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+  header {
+    flex-direction: row;
+  }
+}
