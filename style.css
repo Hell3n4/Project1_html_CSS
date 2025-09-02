@@ -188,8 +188,28 @@ footer {
 
 
 /* brakepoints */
-/* Tablets and small laptops (320px - 1024px) */
-@media (min-width: 320px) {
+
+@media (max-width: 480px) {
+    /* Navbar styles for small screens */
+    body > header > nav > ul > li > a {
+        font-size: 0.8rem; /* Smaller font size for nav links */
+    }
+    
+    body > header > nav > img {
+        display: none; /* Hides the image in the nav bar */
+    }
+
+    /* Hero section styles for small screens */
+    #hero h1 {
+        font-size: 1.5rem; /* Smaller hero title */
+    }
+
+    #hero p {
+        font-size: 0.9rem; /* Smaller hero text */
+    }
+}
+/* Tablets and small laptops (780px - 1024px) */
+@media (min-width: 480px) {
    body {
     font-size: 1.2rem;
   }
