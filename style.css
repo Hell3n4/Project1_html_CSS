@@ -194,7 +194,9 @@ footer {
     body > header > nav > ul > li > a {
         font-size: 0.8rem; /* Smaller font size for nav links */
     }
-    
+    body > header > nav {
+        padding: calc(var(--spacing) / 2); /* Smaller padding */
+    }
     body > header > nav > img {
         display: none; /* Hides the image in the nav bar */
     }
