@@ -58,6 +58,7 @@ nav a:hover {
 body > header > nav > ul {
   display: flex;
   gap: var(--spacing);
+  overflow-x: auto;
 }
 
 body > header > nav > img {
